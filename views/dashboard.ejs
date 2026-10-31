@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <header class = "site-header"> 
+        <a href = "dashboard.html"> </a>
+        <div class = "header-right">
+            <span class = "meta "> you@example.com</span>
+
+        <form action = "login.html"> <button class = "btn-secondary" type = "submit"> logout</button>
+        
+        </form>
+        </div>
+
+    </header>
+
+<main class = "container two-col">
+
+    <section>
+        <h2> Run a scan</h2>
+
+        <form class = "panel" action = "scan.html" method = "get">
+
+            <label for="configtype"> What are you scanning</label>
+            <select id ="configtype" name = "configtype"> 
+                <option value = 's3'>s3 bucket policy</option>
+                <option value = 'iam'>IAM policy</option>
+                <option value = "security-group"> security Groups </option>
+            </select>
+
+            <label for="config"> Paste the Json</label>
+            <textarea id = "config" name="config" rows="10" required ></textarea>
+
+            <div class = "button-list">
+                <button type = "submit" class = "btn">Run scan</button>
+                  <button type = "submit" class = "btn-secondary">Run scan</button>
+            </div>
+        </form>
+    </section>
+
+
+    <section>
+        <h2> your scans </h2>
+        <ul class = "scan-list">
+            <li class = "scan-card">
+                <a class = "scan-name" href = "scan.html">production account </a>
+
+                <div class = "scan-info">
+                    <span> Security groups </span>
+                      <span> 10/20/2026</span>
+                      <span class = "open-count"> 0 open </span>
+                      <span> 3 fixed</span>
+                </div>
+                
+                <button class = "btn-link" type = "button">Delete</button>
+
+            </li>
+
+        </ul>
+
+        </section>
+        </main>
+</body>
+</html>
